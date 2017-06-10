@@ -1,0 +1,12 @@
+---
+layout: post
+---
+
+<div id="home">
+  <ul class="posts">
+    {% for post in site.posts %}
+      <span>{{ post.date | date_to_string }} {{ post.title }}</span>
+      {{  post.content  }}
+    {% endfor %}
+  </ul>
+</div>

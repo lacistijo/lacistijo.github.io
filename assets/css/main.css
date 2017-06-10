@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
 html {
   line-height: 1.15;
   /* 1 */
@@ -390,7 +391,7 @@ template {
   display: none; }
 
 body {
-  background-color: white;
+  background-image: url("http://res.cloudinary.com/lacistijo/image/upload/v1497036251/0_fsf9wk.png");
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -398,6 +399,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+/*HEADINGS*/
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #222;
@@ -472,3 +474,171 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #FFF498; }
+
+/*HEADER SECTION*/
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg); } }
+
+.header-section {
+  border-color: white;
+  border-width: 6px;
+  border-style: none none dashed none;
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .header-section .profile-group {
+    height: 400px;
+    width: 1000px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    background-color: white; }
+  .header-section .profile-holder {
+    cursor: pointer;
+    height: 300px;
+    width: 280px;
+    -webkit-perspective: 600;
+            perspective: 600; }
+    .header-section .profile-holder .profile-text-top {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 40px;
+      text-align: center;
+      color: black; }
+    .header-section .profile-holder .profile-text-bottom {
+      font-family: 'Fredericka the Great', cursive;
+      font-size: 40px;
+      text-align: center;
+      color: black; }
+    .header-section .profile-holder span .profile-text {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 5px 10px; }
+    .header-section .profile-holder .profile-border {
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 5px;
+      border-color: black;
+      margin: 0 auto; }
+    .header-section .profile-holder .profile {
+      height: 180px;
+      width: 180px;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-animation-name: rotate;
+              animation-name: rotate;
+      -webkit-animation-duration: 1.75s;
+              animation-duration: 1.75s;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out; }
+      .header-section .profile-holder .profile .front {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d; }
+      .header-section .profile-holder .profile .back {
+        background: coral;
+        color: azure;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        line-height: 150px;
+        text-align: center;
+        -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden; }
+      .header-section .profile-holder .profile .profile-pic {
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden; }
+    .header-section .profile-holder .profile:hover {
+      transition: all 1.75s ease-in-out;
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden; }
+
+/*ABOUT SECTION*/
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg); } }
+
+.about-section {
+  min-height: 100vh; }
+  .about-section .about-holder {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    -webkit-perspective: 600;
+            perspective: 600;
+    position: relative;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    background: black; }
+  .about-section .about {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1.75s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out; }
+  .about-section .about .front {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-transform-style: preserve-3d; }
+  .about-section .about .back {
+    background: coral;
+    color: azure;
+    border-radius: 50%;
+    line-height: 150px;
+    text-align: center;
+    -webkit-transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden; }
+  .about-section .about:hover {
+    -webkit-transition: all 1.75s ease-in-out;
+    -webkit-transform: rotateY(360deg);
+    -webkit-backface-visibility: hidden; }
+  .about-section .profile-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    -webkit-backface-visibility: hidden; }

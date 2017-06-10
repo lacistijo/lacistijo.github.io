@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var pug         = require('gulp-pug');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var merge       = require('merge-stream');
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -64,10 +65,24 @@ gulp.task('sass', function () {
  * Watch pug files and compile the into HTML
  */
 
-gulp.task('pug', function(){
-    return gulp.src('_pugfiles/*.pug')
+/*gulp.task('pug', function(){
+    return gulp.src('_pugfiles/main/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('_includes'))
+});*/
+
+
+
+gulp.task('pug', function(){
+  var stream1 = gulp.src('_pugfiles/main/*.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('_includes'));
+
+  var stream2 = gulp.src('_pugfiles/blog/*.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('_posts'));
+
+  return merge(stream1, stream2);
 });
 
 
@@ -78,7 +93,7 @@ gulp.task('pug', function(){
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
-    gulp.watch('_pugfiles/*.pug', ['pug']);
+    gulp.watch(['_pugfiles/main/*.pug', '_pugfiles/blog/*.pug'],['pug']);
 });
 
 
@@ -86,4 +101,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'pug']);
