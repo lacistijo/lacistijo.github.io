@@ -391,7 +391,7 @@ template {
   display: none; }
 
 body {
-  background-image: url("http://res.cloudinary.com/lacistijo/image/upload/v1497106979/sunset_sky_cgqa5e.jpg");
+  background-image: url("http://res.cloudinary.com/lacistijo/image/upload/v1497111813/sunset_sky_rzyaho.jpg");
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -497,10 +497,11 @@ body {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url(http://res.cloudinary.com/lacistijo/image/upload/v1497036251/0_fsf9wk.png);
+    background-image: url("http://res.cloudinary.com/lacistijo/image/upload/v1497115947/sunset_sky_horizon_wdlzrn.jpg");
     border-color: white;
     border-width: 6px;
-    border-style: dashed; }
+    border-style: dashed;
+    background-origin: border-box; }
   .header-section .profile-holder {
     cursor: pointer;
     height: 300px;
@@ -624,3 +625,51 @@ body {
     width: 150px;
     border-radius: 50%;
     -webkit-backface-visibility: hidden; }
+
+/*POSTS SECTION*/
+.post-section {
+  width: 1000px;
+  height: 900px;
+  margin: 0 auto;
+  display: block; }
+  .post-section .post-info {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: white; }
+  .post-section span .post-t_d {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 5px 10px; }
+  .post-section .post-insta {
+    width: 300px;
+    height: 100px; }
+    .post-section .post-insta .post-instapic {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%; }
+  .post-section .post-image-holder {
+    width: 650;
+    height: 650;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    .post-section .post-image-holder .post-image {
+      border: 6px dashed white; }
+  .post-section .post-content {
+    width: 650px;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    margin: 0 auto; }
+  .post-section .post-hashtag {
+    width: 650px;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+    margin: 0 auto; }
