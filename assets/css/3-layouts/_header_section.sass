@@ -17,7 +17,10 @@
     display: flex
     justify-content: center
     align-items: center
-    background-color: white
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.4) 100%), url(http://res.cloudinary.com/lacistijo/image/upload/v1497036251/0_fsf9wk.png)
+    border-color: white
+    border-width: 6px
+    border-style: dashed
 
   .profile-holder
     cursor: pointer
@@ -29,13 +32,13 @@
       font-family: 'Fredericka the Great', cursive
       font-size: 40px
       text-align: center
-      color: black
+      color: white
 
     .profile-text-bottom
       font-family: 'Fredericka the Great', cursive
       font-size: 40px
       text-align: center
-      color: black
+      color: white
 
     span .profile-text
       display: inline-block
@@ -56,17 +59,17 @@
       width: 180px
       position: absolute
       transform-style: preserve-3d
-      
+
 
       .front
-        backface-visibility: hidden
         border-radius: 50%
         height: 100%
         width: 100%
         position: absolute
         overflow: hidden
         align-content: center
-        transform-style: preserve-3d
+        backface-visibility: hidden
+
 
       .back
         background: coral
@@ -83,9 +86,9 @@
         height: 180px
         width: 180px
         border-radius: 50%
-        backface-visibility: hidden
+        //backface-visibility: hidden
 
     .profile:hover
       transition: all 1.75s ease-in-out
       transform: rotateY(360deg)
-      backface-visibility: hidden
+      //backface-visibility: hidden

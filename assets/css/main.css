@@ -391,7 +391,7 @@ template {
   display: none; }
 
 body {
-  background-image: url("http://res.cloudinary.com/lacistijo/image/upload/v1497036251/0_fsf9wk.png");
+  background-image: url("http://res.cloudinary.com/lacistijo/image/upload/v1496954713/arizona_sunset_geditk.jpg");
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -497,7 +497,10 @@ body {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    background-color: white; }
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%), url(http://res.cloudinary.com/lacistijo/image/upload/v1497036251/0_fsf9wk.png);
+    border-color: white;
+    border-width: 6px;
+    border-style: dashed; }
   .header-section .profile-holder {
     cursor: pointer;
     height: 300px;
@@ -508,12 +511,12 @@ body {
       font-family: 'Fredericka the Great', cursive;
       font-size: 40px;
       text-align: center;
-      color: black; }
+      color: white; }
     .header-section .profile-holder .profile-text-bottom {
       font-family: 'Fredericka the Great', cursive;
       font-size: 40px;
       text-align: center;
-      color: black; }
+      color: white; }
     .header-section .profile-holder span .profile-text {
       display: inline-block;
       margin: 10px 10px 0 0;
@@ -533,8 +536,6 @@ body {
       -webkit-transform-style: preserve-3d;
               transform-style: preserve-3d; }
       .header-section .profile-holder .profile .front {
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
         border-radius: 50%;
         height: 100%;
         width: 100%;
@@ -542,8 +543,8 @@ body {
         overflow: hidden;
         -ms-flex-line-pack: center;
             align-content: center;
-        -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d; }
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden; }
       .header-section .profile-holder .profile .back {
         background: coral;
         color: azure;
@@ -559,15 +560,11 @@ body {
       .header-section .profile-holder .profile .profile-pic {
         height: 180px;
         width: 180px;
-        border-radius: 50%;
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden; }
+        border-radius: 50%; }
     .header-section .profile-holder .profile:hover {
       transition: all 1.75s ease-in-out;
       -webkit-transform: rotateY(360deg);
-              transform: rotateY(360deg);
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden; }
+              transform: rotateY(360deg); }
 
 /*ABOUT SECTION*/
 @-webkit-keyframes rotate {
