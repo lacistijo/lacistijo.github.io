@@ -476,14 +476,6 @@ body {
   -webkit-tap-highlight-color: #FFF498; }
 
 /*HEADER SECTION*/
-@keyframes rotate {
-  from {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg); }
-  to {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg); } }
-
 .header-section {
   border-color: white;
   border-width: 6px;
@@ -539,15 +531,7 @@ body {
       width: 180px;
       position: absolute;
       -webkit-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-      -webkit-animation-name: rotate;
-              animation-name: rotate;
-      -webkit-animation-duration: 1.75s;
-              animation-duration: 1.75s;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease-in-out;
-              animation-timing-function: ease-in-out; }
+              transform-style: preserve-3d; }
       .header-section .profile-holder .profile .front {
         -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
