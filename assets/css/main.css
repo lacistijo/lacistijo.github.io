@@ -522,51 +522,24 @@ body {
       display: inline-block;
       margin: 10px 10px 0 0;
       padding: 5px 10px; }
-    .header-section .profile-holder .profile-border {
-      height: 180px;
-      width: 180px;
-      border-radius: 50%;
-      border-style: solid;
-      border-width: 5px;
-      border-color: black;
-      margin: 0 auto;
-      background-color: black; }
     .header-section .profile-holder .profile {
-      height: 180px;
-      width: 180px;
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-              transform-style: preserve-3d; }
+      height: 190px;
+      width: 190px;
+      margin: 0 auto; }
       .header-section .profile-holder .profile .front {
         border-radius: 50%;
         height: 100%;
         width: 100%;
         position: absolute;
-        overflow: hidden;
         -ms-flex-line-pack: center;
-            align-content: center;
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden; }
-      .header-section .profile-holder .profile .back {
-        background: coral;
-        color: azure;
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        line-height: 150px;
-        text-align: center;
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-        -webkit-backface-visibility: hidden;
-                backface-visibility: hidden; }
+            align-content: center; }
       .header-section .profile-holder .profile .profile-pic {
         height: 180px;
         width: 180px;
-        border-radius: 50%; }
-    .header-section .profile-holder .profile:hover {
-      transition: all 1.75s ease-in-out;
-      -webkit-transform: rotateY(360deg);
-              transform: rotateY(360deg); }
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 5px;
+        border-color: black; }
 
 /*ABOUT SECTION*/
 @-webkit-keyframes rotate {
@@ -576,28 +549,44 @@ body {
     -webkit-transform: rotateY(360deg); } }
 
 .about-section {
-  min-height: 100vh; }
-  .about-section .about-holder {
+  min-height: 100vh;
+  border-color: white;
+  border-width: 6px;
+  border-style: none none dashed none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.about-profile-section {
+  width: 300px;
+  height: 100vh; }
+  .about-profile-section .about-holder {
     cursor: pointer;
-    height: 150px;
-    width: 150px;
+    height: 260px;
+    width: 260px;
     -webkit-perspective: 600;
             perspective: 600;
     position: relative;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 5px;
-    background: black; }
-  .about-section .about {
+    border-radius: 50%; }
+  .about-profile-section .about {
     height: 100%;
     width: 100%;
     position: absolute;
-    -webkit-transform-style: preserve-3d;
-    -webkit-animation-name: rotate;
-    -webkit-animation-duration: 1.75s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in-out; }
-  .about-section .about .front {
+    border-radius: 50%;
+    -webkit-transform-style: preserve-3d; }
+  .about-profile-section .about-border {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 8px;
+    border-color: black;
+    margin: 0 auto;
+    background-color: black; }
+  .about-profile-section .about .front {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     border-radius: 50%;
@@ -608,7 +597,67 @@ body {
     -ms-flex-line-pack: center;
         align-content: center;
     -webkit-transform-style: preserve-3d; }
-  .about-section .about .back {
+  .about-profile-section .about .back {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden; }
+  .about-profile-section .about:hover {
+    -webkit-transition: all 1.75s ease-in-out;
+    -webkit-transform: rotateY(360deg);
+    -webkit-backface-visibility: hidden; }
+  .about-profile-section .profile-pic {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    -webkit-backface-visibility: hidden; }
+
+.about-desc-section {
+  width: 300px;
+  height: 100vh; }
+
+/*WORK SECTION*/
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg); }
+  to {
+    -webkit-transform: rotateY(360deg); } }
+
+.work-section {
+  min-height: 100vh; }
+  .work-section .work-holder {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    -webkit-perspective: 600;
+            perspective: 600;
+    position: relative;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    background: black; }
+  .work-section .work {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1.75s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out; }
+  .work-section .work .front {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-transform-style: preserve-3d; }
+  .work-section .work .back {
     background: coral;
     color: azure;
     border-radius: 50%;
@@ -616,11 +665,11 @@ body {
     text-align: center;
     -webkit-transform: rotateY(180deg);
     -webkit-backface-visibility: hidden; }
-  .about-section .about:hover {
+  .work-section .work:hover {
     -webkit-transition: all 1.75s ease-in-out;
     -webkit-transform: rotateY(360deg);
     -webkit-backface-visibility: hidden; }
-  .about-section .profile-pic {
+  .work-section .profile-pic {
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -632,12 +681,13 @@ body {
   margin: 0 auto;
   display: block; }
   .post-section .post-info {
+    height: 55px;
     font-family: 'Fredericka the Great', cursive;
     font-size: 40px;
     text-align: center;
     color: white; }
   .post-section .post-insta {
-    padding-top: 40px;
+    padding-top: 70px;
     width: 650px;
     height: 100px;
     margin: 0 auto; }

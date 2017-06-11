@@ -1,4 +1,4 @@
-/*ABOUT SECTION*/
+/*WORK SECTION*/
 
 @-webkit-keyframes rotate
   from
@@ -7,49 +7,36 @@
     -webkit-transform: rotateY(360deg)
 
 
-.about-section
+.work-section
   min-height: 100vh
-  border-color: white
-  border-width: 6px
-  border-style: none none dashed none
-  display: flex
-  justify-content: center
-  align-items: center
   //height: 500px
 
-.about-profile-section
-  width: 300px
-  height: 100vh
-
-  .about-holder
+  .work-holder
     cursor: pointer
-    height: 260px
-    width: 260px
+    height: 150px
+    width: 150px
     perspective: 600
     position: relative
     border-radius: 50%
+    border-style: solid
+    border-width: 5px
+    background: black
 
 
-
-  .about
+  .work
     height: 100%
     width: 100%
     position: absolute
-    border-radius: 50%
-
     -webkit-transform-style: preserve-3d
+    -webkit-animation-name: rotate
+    -webkit-animation-duration: 1.75s
+    -webkit-animation-iteration-count: 1
+    -webkit-animation-timing-function: ease-in-out
 
-  .about-border
-    height: 250px
-    width: 250px
-    border-radius: 50%
-    border-style: solid
-    border-width: 8px
-    border-color: black
-    margin: 0 auto
-    background-color: black
 
-  .about .front
+
+
+  .work .front
     backface-visibility: hidden
     border-radius: 50%
     height: 100%
@@ -60,25 +47,23 @@
     -webkit-transform-style: preserve-3d
 
 
-  .about .back
+  .work .back
+    background: coral
+    color: azure
     border-radius: 50%
-    height: 100%
-    width: 100%
+    line-height: 150px
+    text-align: center
     -webkit-transform: rotateY(180deg)
     -webkit-backface-visibility: hidden
 
 
-  .about:hover
+  .work:hover
     -webkit-transition: all 1.75s ease-in-out
     -webkit-transform: rotateY(360deg)
     -webkit-backface-visibility: hidden
 
   .profile-pic
-    height: 250px
-    width: 250px
+    height: 150px
+    width: 150px
     border-radius: 50%
     -webkit-backface-visibility: hidden
-
-.about-desc-section
-  width: 300px
-  height: 100vh
