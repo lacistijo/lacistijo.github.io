@@ -72,7 +72,6 @@ gulp.task('sass', function () {
 });*/
 
 
-
 gulp.task('pug', function(){
   var stream1 = gulp.src('_pugfiles/main/*.pug')
     .pipe(pug())

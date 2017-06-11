@@ -1,8 +1,9 @@
 /*POSTS SECTION*/
 
 .post-section
-  width: 1000px
-  height: 950px
+  //width: 1000px
+  //height: 1150px
+  white-space: nowrap
   margin: 0 auto
   display: block
   //justify-content: center
@@ -16,10 +17,10 @@
     text-align: center
     color: white
 
-  span .post-t_d
-    display: inline-block
-    margin: 10px 10px 0 0
-    padding: 5px 10px
+  //.post-t_d
+    //display: inline-block
+    //margin: 10px 10px 0 0
+    //padding: 5px 10px
 
   .post-insta
     padding-top: 40px
@@ -33,8 +34,8 @@
       border: 3px solid black
 
   .post-image-holder
-    width: 650
-    height: 650
+    //width: 650
+    //height: 650
     display: flex
     justify-content: center
     align-items: center
@@ -42,13 +43,29 @@
     .post-image
       border: 6px dashed white
 
-  .post-content
-    width: 650px
-    font-family: 'Fredericka the Great', cursive
-    font-size: 20px
-    text-align: left
-    color: white
+  .post-under
     margin: 0 auto
+    width: 650px
+    height: 30px
+    padding-bottom: 30px
+
+    .post-content
+      width: 650px
+      font-family: 'Fredericka the Great', cursive
+      font-size: 20px
+      text-align: left
+      color: white
+      display: block
+      float: left
+
+    .post-date
+      width: 650px
+      font-family: 'Fredericka the Great', cursive
+      font-size: 18px
+      text-align: right
+      color: white
+      display: block
+      float: right
 
   .post-hashtag
     width: 650px
