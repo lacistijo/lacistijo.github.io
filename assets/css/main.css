@@ -542,27 +542,25 @@ body {
         border-color: black; }
 
 /*ABOUT SECTION*/
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotateY(0deg); }
-  to {
-    -webkit-transform: rotateY(360deg); } }
-
 .about-section {
   min-height: 100vh;
   border-color: white;
   border-width: 6px;
   border-style: none none dashed none;
+  white-space: nowrap;
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
+  display: flex; }
 
 .about-profile-section {
-  width: 300px;
-  height: 600px; }
+  float: left;
+  width: 50%;
+  white-space: normal;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
   .about-profile-section .about-holder {
     cursor: pointer;
     height: 260px;
@@ -570,13 +568,15 @@ body {
     -webkit-perspective: 600;
             perspective: 600;
     position: relative;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin: 0 auto; }
   .about-profile-section .about {
     height: 100%;
     width: 100%;
     position: absolute;
     border-radius: 50%;
-    -webkit-transform-style: preserve-3d; }
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
   .about-profile-section .about-border {
     height: 250px;
     width: 250px;
@@ -596,26 +596,39 @@ body {
     overflow: hidden;
     -ms-flex-line-pack: center;
         align-content: center;
-    -webkit-transform-style: preserve-3d; }
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
   .about-profile-section .about .back {
     border-radius: 50%;
     height: 100%;
     width: 100%;
     -webkit-transform: rotateY(180deg);
-    -webkit-backface-visibility: hidden; }
+            transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
   .about-profile-section .about:hover {
-    -webkit-transition: all 1.75s ease-in-out;
+    transition: all 1.75s ease-in-out;
     -webkit-transform: rotateY(360deg);
-    -webkit-backface-visibility: hidden; }
+            transform: rotateY(360deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
   .about-profile-section .profile-pic {
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    -webkit-backface-visibility: hidden; }
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
 
 .about-desc-section {
-  width: 300px;
-  height: 100vh; }
+  float: right;
+  width: 50%;
+  text-align: center; }
+
+.about-desc-text {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 20px;
+  color: white;
+  margin: 0 auto; }
 
 /*WORK SECTION*/
 @-webkit-keyframes rotate {

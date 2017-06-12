@@ -1,25 +1,26 @@
 /*ABOUT SECTION*/
 
-@-webkit-keyframes rotate
-  from
-    -webkit-transform: rotateY(0deg)
-  to
-    -webkit-transform: rotateY(360deg)
-
-
 .about-section
   min-height: 100vh
   border-color: white
   border-width: 6px
   border-style: none none dashed none
+  white-space: nowrap
   display: flex
-  justify-content: center
-  align-items: center
+
+  //justify-content: center
+  //align-items: center
   //height: 500px
 
 .about-profile-section
-  width: 300px
-  height: 600px
+  float: left
+  width: 50%
+  white-space: normal
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  //display: block
+
 
   .about-holder
     cursor: pointer
@@ -28,7 +29,7 @@
     perspective: 600
     position: relative
     border-radius: 50%
-
+    margin: 0 auto
 
 
   .about
@@ -36,8 +37,7 @@
     width: 100%
     position: absolute
     border-radius: 50%
-
-    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
 
   .about-border
     height: 250px
@@ -57,28 +57,37 @@
     position: absolute
     overflow: hidden
     align-content: center
-    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
 
 
   .about .back
     border-radius: 50%
     height: 100%
     width: 100%
-    -webkit-transform: rotateY(180deg)
-    -webkit-backface-visibility: hidden
+    transform: rotateY(180deg)
+    backface-visibility: hidden
 
 
   .about:hover
-    -webkit-transition: all 1.75s ease-in-out
-    -webkit-transform: rotateY(360deg)
-    -webkit-backface-visibility: hidden
+    transition: all 1.75s ease-in-out
+    transform: rotateY(360deg)
+    backface-visibility: hidden
 
   .profile-pic
     height: 250px
     width: 250px
     border-radius: 50%
-    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
 
 .about-desc-section
-  width: 300px
-  height: 100vh
+  float: right
+  width: 50%
+
+  text-align: center
+  //display: block
+
+.about-desc-text
+  font-family: 'Fredericka the Great', cursive
+  font-size: 20px
+  color: white
+  margin: 0 auto
