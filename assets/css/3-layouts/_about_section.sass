@@ -5,9 +5,7 @@
   border-color: white
   border-width: 6px
   border-style: none none dashed none
-  white-space: nowrap
   display: flex
-
   //justify-content: center
   //align-items: center
   //height: 500px
@@ -19,6 +17,8 @@
   display: flex
   flex-direction: column
   justify-content: space-around
+  padding-top: 20px
+  padding-bottom: 20px
   //display: block
 
 
@@ -28,37 +28,31 @@
     width: 260px
     perspective: 600
     position: relative
-    border-radius: 50%
     margin: 0 auto
-
+    padding-top: 10px
+    padding-bottom: 10px
 
   .about
     height: 100%
     width: 100%
-    position: absolute
-    border-radius: 50%
+    margin: 0 auto
     transform-style: preserve-3d
 
   .about-border
     height: 250px
     width: 250px
+    background-color: black
     border-radius: 50%
     border-style: solid
     border-width: 8px
     border-color: black
-    margin: 0 auto
-    background-color: black
 
   .about .front
-    backface-visibility: hidden
-    border-radius: 50%
     height: 100%
     width: 100%
+    border-radius: 50%
     position: absolute
-    overflow: hidden
-    align-content: center
     transform-style: preserve-3d
-
 
   .about .back
     border-radius: 50%
@@ -67,11 +61,9 @@
     transform: rotateY(180deg)
     backface-visibility: hidden
 
-
   .about:hover
     transition: all 1.75s ease-in-out
     transform: rotateY(360deg)
-    backface-visibility: hidden
 
   .profile-pic
     height: 250px
@@ -82,12 +74,21 @@
 .about-desc-section
   float: right
   width: 50%
+  display: flex
+  align-items: center
+  justify-content: center
 
-  text-align: center
-  //display: block
 
 .about-desc-text
+  //white-space: pre-wrap
+  padding: 40px
+  margin: 40px
+  //word-wrap: break-word
   font-family: 'Fredericka the Great', cursive
-  font-size: 20px
+  font-size: 30px
   color: white
-  margin: 0 auto
+  border-color: white
+  border-width: 6px
+  border-style: dashed
+  text-align: center
+  background-color: #dcae1d
