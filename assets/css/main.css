@@ -481,7 +481,7 @@ body {
   border-color: white;
   border-width: 6px;
   border-style: none none dashed none;
-  min-height: 100vh;
+  min-height: 700px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -546,7 +546,7 @@ body {
 
 /*ABOUT SECTION*/
 .about-section {
-  min-height: 100vh;
+  min-height: 750px;
   border-color: white;
   border-width: 6px;
   border-style: none none dashed none;
@@ -639,7 +639,7 @@ body {
 
 /*WORK SECTION*/
 .work-section {
-  min-height: 100vh;
+  min-height: 750px;
   border-color: white;
   border-width: 6px;
   display: -ms-flexbox;
