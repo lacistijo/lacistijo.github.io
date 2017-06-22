@@ -569,8 +569,8 @@ body {
     cursor: pointer;
     height: 260px;
     width: 260px;
-    -webkit-perspective: 600;
-            perspective: 600;
+    -webkit-perspective: 600px;
+            perspective: 600px;
     position: relative;
     margin: 0 auto;
     padding-top: 10px;
@@ -579,6 +579,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0 auto;
+    transition: 0.6s;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d; }
   .about-profile-section .about-border {
@@ -593,21 +594,24 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    z-index: 2;
     position: absolute;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d; }
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
   .about-profile-section .about .back {
     border-radius: 50%;
     height: 100%;
     width: 100%;
+    position: absolute;
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
   .about-profile-section .about:hover {
-    transition: all 1.75s ease-in-out;
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg); }
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
   .about-profile-section .profile-pic {
     height: 250px;
     width: 250px;
